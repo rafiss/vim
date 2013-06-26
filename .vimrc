@@ -117,6 +117,7 @@ call pathogen#helptags()
 " Powerline
 "python from powerline.ext.vim import source_plugin; source_plugin()
 "let g:Powerline_symbols="fancy"
+set rtp+=/home/rafiss/.vim/bundle/powerline/powerline/bindings/vim
 
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_switch_buffer = 2
