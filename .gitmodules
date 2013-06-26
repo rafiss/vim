@@ -28,3 +28,6 @@
 [submodule "bundle/checksyntax"]
 	path = bundle/checksyntax
 	url = https://github.com/tomtom/checksyntax_vim.git
+[submodule "bundle/sudoedit"]
+	path = bundle/sudoedit
+	url = https://github.com/chrisbra/SudoEdit.vim.git
