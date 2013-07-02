@@ -115,9 +115,9 @@ call pathogen#infect()
 call pathogen#helptags()
 
 " Powerline
-"python from powerline.ext.vim import source_plugin; source_plugin()
-"let g:Powerline_symbols="fancy"
 set rtp+=/home/rafiss/.vim/bundle/powerline/powerline/bindings/vim
+set laststatus=2 " Always display the statusline in all windows"
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)"
 
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_switch_buffer = 2
@@ -188,9 +188,9 @@ endif
 " <CR>: close popup and save indent.
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function()
-  return neocomplete#smart_close_popup() . "\<CR>"
+  "return neocomplete#smart_close_popup() . "\<CR>"
   " For no inserting <CR> key.
-  "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+  return pumvisible() ? neocomplete#close_popup() : "\<CR>"
 endfunction
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -200,7 +200,7 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplete#close_popup()
 inoremap <expr><C-e>  neocomplete#cancel_popup()
 " Close popup by <Space>.
-inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
+" inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
 
 " For cursor moving in insert mode(Not recommended)
 "inoremap <expr><Left>  neocomplete#close_popup() . "\<Left>"
