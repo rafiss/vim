@@ -7,6 +7,12 @@ if v:progname =~? "evim"
   finish
 endif
 
+" Allow vim for crontab
+:if $VIM_CRONTAB == "true"
+  :set nobackup
+  :set nowritebackup
+:endif
+
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
