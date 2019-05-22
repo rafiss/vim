@@ -117,8 +117,7 @@ set noswapfile
 
 inoremap jj <Esc>
 
-call pathogen#infect()
-call pathogen#helptags()
+execute pathogen#infect()
 
 " Airline
 let g:airline_powerline_fonts = 1
